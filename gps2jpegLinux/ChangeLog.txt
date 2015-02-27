@@ -1,0 +1,93 @@
+Versão 4.0 - 21/09/2011
+* Novas Funcionalidades
+    - Foi adicionado um botão para remover da lista de fotos as imagens que que não possuem informação de data. Processo realizado por uma thread separada da interface.
+    - Adicionado o salvamento e exclusão de outras metatags: Exif.GPSInfo.GPSTimeStamp, Exif.GPSInfo.GPSDateStamp, Exif.GPSInfo.GPSVersionID, Exif.GPSInfo.GPSMapDatum
+    - A compilação da biblioteca Qt foi alterado para estático.
+* Bugs Corrigidos
+    - Quando mandava posicionar alguma imagem que tinha a data fora do perido do tracklog, éra exibido os segundos do ponto mais proximo com o valor errado, agora foi criada uma nova mensgem que informa que a data da imagem esta fora do perido do tracklog.
+    - Deixava o campo da altitude em branco quando o valor era zero.
+    - Sempre mostrava o valor da altitude como positivo.
+    - Não mostrava a latitude quando o valor era positivo.
+-------------------------------------------------------------------------------
+
+Versão 3.4 - 04/04/2011
+* Novas Funcionalidades
+    - Foi adicionado um botão para remover da lista de fotos as imagens que já estão georeferenciadas. processo realizado por uma thread separada da interface.
+-------------------------------------------------------------------------------
+
+Versão 3.3 - 03/01/2011
+* Novas Funcionalidades
+	- Foi criado um icone para identificar o software.
+
+* Traduções
+        - Corrigida a tradução para o Inglês.
+
+* Bugs Corrigidos
+	- Travamento do Programa quando mandava alterar, remover ou inserir tags em arquivos que estejam marcados apenas como leitura, ou arquivos que estejam sendo acessados no mesmo momento.
+	- Travamento do programa quando tentava georeferenciar imagens que não continham dados EXIF.
+	- Travamento em outras várias situações quando ocorria de um mesmo arquivo ser acessado ao mesmo tempo por threads diferentes, ou por programas externos.
+        - Travamento do programa quando tenta abrir um arquivo de tracklog de formato inválido.
+--------------------------------------------------------------------------------
+
+Versão 3.2 - 23/12/2010
+* Novas Funcionalidades
+	- Foi adotada a nova versão da biblioteca exiv2 para manipulação de dados EXIF, agora está sendo utilizada a versão 0.21
+-------------------------------------------------------------------------------
+Versão 3.1
+* Novas Funcionalidades
+	- Exibição de metadados no padrão XMP.
+
+* Bugs Corrigidos
+	- Erro na compilação da biblioteca exiv2 utilizada na versão 3.0
+	- Erro na exibição do nome do arquivo quando as fotos eram adicionadas individualmente.
+
+----------------------------------------------------------------------------------
+Versão 3.0 - 24/09/2010
+* Novas Funcionalidades
+	- Adicionado a importação de arquivos usando threads.
+	- Adicionada a Remoção de tags EXIF usando threads.
+	- Adicionado o georeferenciamento das imagens usando threads.
+	- Implementado o salvamento das configurações de fuso horário, horário de verão e tolerância de tempo nas configurações do sistema.
+	- Adotada  a versão 0.20 da biblioteca exiv2, utilizada na manipulação de dados EXIF.
+	- Adicionada a exibição de todas as tag EXIF e IPTC da imagem selecionada.
+	- Implementada a alteração da tag Exif.Image.Software para identificar que o gps2jpeg foi o responsável pela alteração dos dados exif da imagem
+	- Adicionado o zoom in e zoom out na imagem
+
+----------------------------------------------------------------------------------
+Versão 2.3.1 - 03/03/2010
+* Alterações:
+	- Colocado o aviso da licença GPLv3 nos arquivos fonte do software
+	- Criado os arquivos de COPYING e AUTHORS.
+ 
+----------------------------------------------------------------------------------
+Versão 2.3 - 17/02/2010
+* Novas Funcionalidades:
+	- Inserido uma figura na tela principal para solicitação de doações via Paypal
+    	- No menu ajuda foi colocado uma opção para visitar o site do desenvolvedor, site do projeto, solicitar melhorias, informar defeitos e fazer doação para o desenvolvedor.
+	- Manipula tags EXIF em arquivos no formatos png e tiff.
+	- Foi adotada a nova versão da biblioteca exiv2 para manipulação de dados EXIF, agora está sendo utilizada a versão 0.19
+        	- Foi adicionada a funcionalidade de leitura de arquivos do formato gpx.
+
+* Bugs Corrigidos:
+	- A altitude que estava sendo definida nas fotos estavam sendo trocadas, valores acima do nivel do mar estavam sendo definidos abaixo.
+	- A remoção de dados exif não estava removendo a tag Exif.GPSInfo.AltitudeRef
+	- Na versão para windows foi adicionado a Dll libgcc_s_dw2-1.dll pois em sistemas que ela não está presente o software não executa.
+        	- O botão de seleção de linguagem estava ficando desmarcado caso fosse selecionado a mesma linguagem duas vezes.
+
+----------------------------------------------------------------------------------
+Versão 2.2 - 29/01/2010
+* Bugs Corrigidos:
+	- A função de remoção de dados exiv não estáva removendo os dados de longitude, latitude e altitude na primeira execução.
+
+----------------------------------------------------------------------------------
+Versão 2.1 - 04/01/2010
+* Bugs Corrigidos:
+	- O programa fechava quando mandava abrir um arquivo do TrackMaker no formato txt que não estava com as coordenadas geográficas salvas no formato de graus.
+
+* Novas Funcionalidades:
+	- Permite a utilização de Múltiplas Linguagens.
+	- Traduzido para Inglês.
+	- A opção de adicionar tracklogs sempre abre no último diretório que foi utilizado.
+	- As opções de adicionar fotos e adicionar diretórios também abrem no último diretório utilizado.
+	- Adicionada uma opção para visitar o fórum do programa.
+	- Adicionada a opção de verificar atualizações.

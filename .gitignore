@@ -1,0 +1,6 @@
+*.exe
+*.o
+/gps2jpegLinux/dist/*
+/gps2jpegWindows/dist/*
+/gps2jpegLinux/temp/*
+/gps2jpegWindows/temp/*

@@ -1,0 +1,43 @@
+==================================================
+Instalação no Windows
+==================================================
+A instala��o no windows � feita atrav�s do instalador que automatiza todo o processo, n�o sendo
+necess�rio compila��o do software
+
+==================================================
+Instalação no Linux ou Mac
+==================================================
+
+Para instalar o programa no linux � necess�rio ter instalado as bibliotecas do Qt 4.5 ou superior,
+e a biblioteca exiv2 na vers�o 0.18 ou superior.
+O Qt est� dispon�vel nos reposit�rios oficiais das distribui��es, em raras exce��o que n�o estejam
+deve ser baixado do site http://qt.nokia.com/downloads.
+
+A biblioteca exiv2 para linux pode ser encontrada nos resposit�rios oficiais de algumas distribui��es,
+nos reposit�rios do OpenSuse e do Fedora eu j� confirmei que tem, se n�o for encontrada nos reposit�rios
+os fontes podem ser baixados no site www.exiv2.org, neste caso � necess�rio compilar a biblioteca.
+
+Ap�s descompactar o conteudo do arquivo gps2jpegLinux.tar.gz. � necess�rio entrar no diret�rio que foi
+criado e executar os seguintes comandos:
+
+$ qmake-qt4 gps2jpeg.pro (Fedora) ou
+$ qmake gps2jpeg.pro (OpenSuse)
+
+# Em alguns sistemas Linux o comando qmake pode chamar a vers�o antiga do software e com isso dar erro na gera��o do Makefile
+
+# No OpenSuse 11.0 foi necess�rio compilar a biblioteca exiv2 do site, pois a vers�o disponibilizada no
+reposit�rio era uma vers�o antiga.
+
+$ make
+
+Ir� compilar os arquivos fonte do projeto.
+Ap�s executar o comando:
+
+$ make install
+
+Esse comando ir� compiar o arquivo execut�vel do programa para a pasta /usr/local/gps2jpeg
+
+Ap�s para executar o programa � necess�rio ir na pasta /usr/local/gps2jpeg e executar o programa
+com o comando
+
+$ ./gps2jpeg

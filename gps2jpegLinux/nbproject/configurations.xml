@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Arquivos de cabeçalho"
+                   projectFiles="true">
+      <itemPath>DadosArquivoGps.h</itemPath>
+      <itemPath>GpsPosition.h</itemPath>
+      <itemPath>ManipulaExifFotos.h</itemPath>
+      <itemPath>PeriodoAno.h</itemPath>
+      <itemPath>PeriodoDia.h</itemPath>
+      <itemPath>PeriodoMes.h</itemPath>
+      <itemPath>PeriodoTracklog.h</itemPath>
+      <itemPath>ReadFileGps.h</itemPath>
+      <itemPath>calculaTempo.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Arquivos de código-fonte"
+                   projectFiles="true">
+      <itemPath>DadosArquivoGps.cpp</itemPath>
+      <itemPath>GpsPosition.cpp</itemPath>
+      <itemPath>ManipulaExifFotos.cpp</itemPath>
+      <itemPath>PeriodoAno.cpp</itemPath>
+      <itemPath>PeriodoDia.cpp</itemPath>
+      <itemPath>PeriodoMes.cpp</itemPath>
+      <itemPath>PeriodoTracklog.cpp</itemPath>
+      <itemPath>ReadFileGps.cpp</itemPath>
+      <itemPath>calculaTempo.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Arquivos de recurso"
+                   projectFiles="true">
+      <itemPath>resources/resourcesIcon.qrc</itemPath>
+      <itemPath>translations/translations.qrc</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f4" displayName="Documentos" projectFiles="true">
+      <itemPath>AUTHORS.txt</itemPath>
+      <itemPath>COPYING.txt</itemPath>
+      <itemPath>ChangeLog.txt</itemPath>
+      <itemPath>INSTALL.txt</itemPath>
+      <itemPath>README.txt</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f1" displayName="Formularios" projectFiles="true">
+      <logicalFolder name="f3" displayName="Adiciona Metadados" projectFiles="true">
+        <itemPath>Forms/AddMetadata/AddMetadata.cpp</itemPath>
+        <itemPath>Forms/AddMetadata/AddMetadata.h</itemPath>
+        <itemPath>Forms/AddMetadata/AddMetadata.ui</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="Tela Exibe Imagem" projectFiles="true">
+        <logicalFolder name="f3" displayName="Form" projectFiles="true">
+          <itemPath>Forms/ExibeFoto.cpp</itemPath>
+          <itemPath>Forms/ExibeFoto.h</itemPath>
+          <itemPath>Forms/ExibeFoto.ui</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f2" displayName="Graphics Scene" projectFiles="true">
+          <itemPath>Forms/ExibeFoto/GraphicsScene.cpp</itemPath>
+          <itemPath>Forms/ExibeFoto/GraphicsScene.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f1" displayName="GraphicsView" projectFiles="true">
+          <itemPath>Forms/ExibeFoto/GraphicsView.cpp</itemPath>
+          <itemPath>Forms/ExibeFoto/GraphicsView.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="f1" displayName="Tela Principal" projectFiles="true">
+        <logicalFolder name="f1" displayName="Form" projectFiles="true">
+          <itemPath>Forms/FormPrincipal/TelaPrincipal.cpp</itemPath>
+          <itemPath>Forms/FormPrincipal/TelaPrincipal.h</itemPath>
+          <itemPath>Forms/FormPrincipal/TelaPrincipal.ui</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f3" displayName="Label Thumbnail" projectFiles="true">
+          <itemPath>Forms/FormPrincipal/TrataEventoLabelThumbnail.cpp</itemPath>
+          <itemPath>Forms/TrataEventoLabelThumbnail.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f2" displayName="LabelPaypal" projectFiles="true">
+          <itemPath>Forms/FormPrincipal/TrataEventoLabelPaypal.cpp</itemPath>
+          <itemPath>Forms/FormPrincipal/TrataEventoLabelPaypal.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f4" displayName="TableWidget Jpeg" projectFiles="true">
+          <itemPath>Forms/FormPrincipal/TrataEventoTableWidgetJpeg.cpp</itemPath>
+          <itemPath>Forms/FormPrincipal/TrataEventoTableWidgetJpeg.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="f4"
+                     displayName="Verificar Atualizações"
+                     projectFiles="true">
+        <itemPath>Forms/VerificarAtualizacoes.cpp</itemPath>
+        <itemPath>Forms/VerificarAtualizacoes.h</itemPath>
+        <itemPath>Forms/VerificarAtualizacoes.ui</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="f3" displayName="Thread Exif" projectFiles="true">
+      <logicalFolder name="f1" displayName="Load ExifDatas" projectFiles="true">
+        <itemPath>threadExif/ThreadLoadExifDatas.cpp</itemPath>
+        <itemPath>threadExif/ThreadLoadExifDatas.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="Position Images" projectFiles="true">
+        <itemPath>threadExif/ThreadPositionImages.cpp</itemPath>
+        <itemPath>threadExif/ThreadPositionImages.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f5"
+                     displayName="Remove Arquivos Sem Data"
+                     projectFiles="true">
+        <itemPath>threadExif/ThreadRemoveFileNoDate.cpp</itemPath>
+        <itemPath>threadExif/ThreadRemoveFileNoDate.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="Remove ExifDatas" projectFiles="true">
+        <itemPath>threadExif/ThreadRemoveExifDatas.cpp</itemPath>
+        <itemPath>threadExif/ThreadRemoveExifDatas.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f4"
+                     displayName="Remove Images Georeferenciadas"
+                     projectFiles="true">
+        <itemPath>threadExif/ThreadRemoveImagesGeoref.cpp</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="f2" displayName="Traduções" projectFiles="true">
+      <itemPath>translations/linguagem_en_US.ts</itemPath>
+      <itemPath>translations/linguagem_es.ts</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Arquivos importantes"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+      <itemPath>README</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="4">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <qt>
+        <target>gps2jpegLinuxD</target>
+        <version>3.3</version>
+        <modules>core gui network</modules>
+        <mocDir>./temp</mocDir>
+        <rccDir>./temp</rccDir>
+        <uiDir>./temp</uiDir>
+        <defs>
+          <Elem>TRANSLATIONS = translations/linguagem_en.ts</Elem>
+          <Elem>CODECFORSRC = UTF-8</Elem>
+        </defs>
+      </qt>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>temp</pElem>
+            <pElem>Forms</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>exiv2</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <packaging>
+        <packType>Tar</packType>
+        <packFileList>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+        </packFileList>
+      </packaging>
+      <item path="AUTHORS.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="COPYING.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ChangeLog.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DadosArquivoGps.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DadosArquivoGps.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/AddMetadata/AddMetadata.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Forms/AddMetadata/AddMetadata.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/AddMetadata/AddMetadata.ui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/ExibeFoto.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Forms/ExibeFoto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/ExibeFoto.ui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/ExibeFoto/GraphicsScene.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Forms/ExibeFoto/GraphicsScene.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/ExibeFoto/GraphicsView.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Forms/ExibeFoto/GraphicsView.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/FormPrincipal/TelaPrincipal.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Forms/FormPrincipal/TelaPrincipal.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Forms/FormPrincipal/TelaPrincipal.ui"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Forms/FormPrincipal/TrataEventoLabelPaypal.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Forms/FormPrincipal/TrataEventoLabelPaypal.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Forms/FormPrincipal/TrataEventoLabelThumbnail.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Forms/FormPrincipal/TrataEventoTableWidgetJpeg.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Forms/FormPrincipal/TrataEventoTableWidgetJpeg.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Forms/TrataEventoLabelThumbnail.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/VerificarAtualizacoes.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Forms/VerificarAtualizacoes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/VerificarAtualizacoes.ui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GpsPosition.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GpsPosition.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="INSTALL.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ManipulaExifFotos.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ManipulaExifFotos.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PeriodoAno.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PeriodoAno.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PeriodoDia.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PeriodoDia.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PeriodoMes.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PeriodoMes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PeriodoTracklog.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PeriodoTracklog.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="README.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ReadFileGps.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ReadFileGps.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="calculaTempo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="calculaTempo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="resources/resourcesIcon.qrc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="threadExif/ThreadLoadExifDatas.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="threadExif/ThreadLoadExifDatas.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="threadExif/ThreadPositionImages.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="threadExif/ThreadPositionImages.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="threadExif/ThreadRemoveExifDatas.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="threadExif/ThreadRemoveExifDatas.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="threadExif/ThreadRemoveFileNoDate.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="threadExif/ThreadRemoveFileNoDate.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="threadExif/ThreadRemoveImagesGeoref.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="translations/linguagem_en_US.ts" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="translations/linguagem_es.ts" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="translations/translations.qrc" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="4">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <qt>
+        <target>gps2jpegLinux</target>
+        <version>3.3</version>
+        <buildMode>1</buildMode>
+        <modules>core gui network</modules>
+        <mocDir>./temp</mocDir>
+        <rccDir>./temp</rccDir>
+        <uiDir>./temp</uiDir>
+        <defs>
+          <Elem>TRANSLATIONS = translations/linguagem_en.ts</Elem>
+          <Elem>CODECFORSRC = UTF-8</Elem>
+        </defs>
+      </qt>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>temp</pElem>
+            <pElem>Forms</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>exiv2</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <packaging>
+        <packType>Tar</packType>
+        <packFileList>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+        </packFileList>
+      </packaging>
+      <item path="DadosArquivoGps.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DadosArquivoGps.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/AddMetadata/AddMetadata.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Forms/AddMetadata/AddMetadata.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/AddMetadata/AddMetadata.ui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/ExibeFoto.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Forms/ExibeFoto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/ExibeFoto.ui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/ExibeFoto/GraphicsScene.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Forms/ExibeFoto/GraphicsScene.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/ExibeFoto/GraphicsView.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Forms/ExibeFoto/GraphicsView.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/FormPrincipal/TelaPrincipal.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Forms/FormPrincipal/TelaPrincipal.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Forms/FormPrincipal/TelaPrincipal.ui"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Forms/FormPrincipal/TrataEventoLabelPaypal.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Forms/FormPrincipal/TrataEventoLabelPaypal.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Forms/FormPrincipal/TrataEventoLabelThumbnail.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Forms/FormPrincipal/TrataEventoTableWidgetJpeg.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Forms/FormPrincipal/TrataEventoTableWidgetJpeg.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Forms/TrataEventoLabelThumbnail.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/VerificarAtualizacoes.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Forms/VerificarAtualizacoes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Forms/VerificarAtualizacoes.ui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GpsPosition.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GpsPosition.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ManipulaExifFotos.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ManipulaExifFotos.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PeriodoAno.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PeriodoAno.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PeriodoDia.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PeriodoDia.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PeriodoMes.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PeriodoMes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PeriodoTracklog.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PeriodoTracklog.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ReadFileGps.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ReadFileGps.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="calculaTempo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="calculaTempo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="resources/resourcesIcon.qrc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="threadExif/ThreadLoadExifDatas.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="threadExif/ThreadLoadExifDatas.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="threadExif/ThreadPositionImages.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="threadExif/ThreadPositionImages.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="threadExif/ThreadRemoveExifDatas.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="threadExif/ThreadRemoveExifDatas.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="threadExif/ThreadRemoveFileNoDate.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="threadExif/ThreadRemoveFileNoDate.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="threadExif/ThreadRemoveImagesGeoref.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="translations/linguagem_en_US.ts" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="translations/linguagem_es.ts" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="translations/translations.qrc" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

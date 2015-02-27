@@ -1,0 +1,32 @@
+<RCC>
+  <qresource prefix="IconesMenu">
+    <file>adobe-xmp.png</file>
+    <file>blue-document-open.png</file>
+    <file>filesaveas.png</file>
+    <file>iptc_top_logo.png</file>
+    <file>exif.png</file>
+    <file>PayPal_50x34.gif</file>
+    <file>bugzilla.png</file>
+    <file>accessories-dictionary.png</file>
+    <file>flag_spain.png</file>
+    <file>flag_eua.png</file>
+    <file>paypal.gif</file>
+    <file>gl117.png</file>
+    <file>config-language.png</file>
+    <file>help-contents.png</file>
+    <file>help-about.png</file>
+    <file>document-open-recent.png</file>
+    <file>gtk-delete.png</file>
+    <file>emblem-photos.png</file>
+    <file>blue-folder-new.png</file>
+    <file>oxyblue-folder-new.png</file>
+    <file>gedit.png</file>
+    <file>emblem-draft.png</file>
+    <file>list-remove.png</file>
+    <file>filefind.png</file>
+    <file>brasil_256.png</file>
+    <file>gps2jpeg_256.png</file>
+    <file>error.png</file>
+    <file>dialog-warning.png</file>
+  </qresource>
+</RCC>

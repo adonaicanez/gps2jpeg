@@ -1,0 +1,1852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TelaPrincipal</class>
+ <widget class="QMainWindow" name="TelaPrincipal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>880</width>
+    <height>746</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>880</width>
+    <height>746</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">gps2jpeg</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../resources/resourcesIcon.qrc">
+    <normaloff>:/IconesMenu/gps2jpeg_256.png</normaloff>:/IconesMenu/gps2jpeg_256.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0" rowspan="2">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPushButton" name="pushButtonOpenLogGPS">
+          <property name="minimumSize">
+           <size>
+            <width>175</width>
+            <height>28</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>175</width>
+            <height>28</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Selecionar arquivos de log de gps exportados pelo &lt;span style=&quot; font-weight:600;&quot;&gt;TrackMaker&lt;/span&gt; no formato &lt;span style=&quot; font-weight:600;&quot;&gt;txt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>Adicionar tracklogs</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../../resources/resourcesIcon.qrc">
+            <normaloff>:/IconesMenu/emblem-draft.png</normaloff>:/IconesMenu/emblem-draft.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line_3">
+          <property name="minimumSize">
+           <size>
+            <width>175</width>
+            <height>3</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>175</width>
+            <height>3</height>
+           </size>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonOpenJpeg">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>175</width>
+            <height>28</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>175</width>
+            <height>28</height>
+           </size>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::StrongFocus</enum>
+          </property>
+          <property name="text">
+           <string>Adicionar Fotos</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../../resources/resourcesIcon.qrc">
+            <normaloff>:/IconesMenu/emblem-photos.png</normaloff>:/IconesMenu/emblem-photos.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonOpenDirJpeg">
+          <property name="minimumSize">
+           <size>
+            <width>175</width>
+            <height>28</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>175</width>
+            <height>28</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Adicionar Diretório</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../../resources/resourcesIcon.qrc">
+            <normaloff>:/IconesMenu/oxyblue-folder-new.png</normaloff>:/IconesMenu/oxyblue-folder-new.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBoxInclSubdir">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>175</width>
+            <height>19</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>175</width>
+            <height>19</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Incluir Subdiretórios</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line1">
+          <property name="minimumSize">
+           <size>
+            <width>171</width>
+            <height>3</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>171</width>
+            <height>3</height>
+           </size>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBoxNaoAlteraDataArquivo">
+          <property name="minimumSize">
+           <size>
+            <width>175</width>
+            <height>19</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>175</width>
+            <height>19</height>
+           </size>
+          </property>
+          <property name="acceptDrops">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Não Alterar Data do Arquivo   </string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBoxInterpolarPontos">
+          <property name="minimumSize">
+           <size>
+            <width>167</width>
+            <height>19</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>167</width>
+            <height>19</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Interpolar Pontos</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line2">
+          <property name="minimumSize">
+           <size>
+            <width>171</width>
+            <height>3</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>171</width>
+            <height>3</height>
+           </size>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMaximumSize</enum>
+          </property>
+          <item>
+           <widget class="QLabel" name="labelFusoHorario">
+            <property name="minimumSize">
+             <size>
+              <width>113</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>113</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Fuso horário onde o tracklog do gps foi adquirido, fuso horário oficial de Brasilia é -3:00 hs</string>
+            </property>
+            <property name="text">
+             <string>Fuso Horário</string>
+            </property>
+            <property name="buddy">
+             <cstring>lineEditFusoHorario</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditFusoHorario">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>55</width>
+              <height>18</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>55</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="inputMask">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string notr="true"/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBoxHorarioDeVerao">
+          <property name="minimumSize">
+           <size>
+            <width>175</width>
+            <height>19</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>175</width>
+            <height>19</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Se o aparelho de GPS estiver operando com o horário de verão, está opção deve ser marcada</string>
+          </property>
+          <property name="text">
+           <string>GPS com Horário de Verão</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMaximumSize</enum>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="minimumSize">
+             <size>
+              <width>113</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>113</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>Maior diferença de tempo entre o horario das coordenadas do GPS e o horário que a foto foi tirada, tempo em segundos</string>
+            </property>
+            <property name="text">
+             <string>Tolerância de Tempo</string>
+            </property>
+            <property name="buddy">
+             <cstring>lineEditToleranciaTempo</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditToleranciaTempo">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>55</width>
+              <height>18</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>55</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="inputMask">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string notr="true"/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMaximumSize</enum>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="minimumSize">
+             <size>
+              <width>113</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>113</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Tempo em segundos que a hora das fotos está adiantado em relação a hora do tracklog,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Ex: hora da foto 13:20:23 e o tempo que você verificou no tracklog está marcando 13:20:10, você deve colocar -13 segundos para que o tempo nas fotos fiquem iguais aos pontos obtidos pelo GPS.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Tempo para Corrigir nas Fotos</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+            <property name="buddy">
+             <cstring>lineEditCorrecaoTempoFotos</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditCorrecaoTempoFotos">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>55</width>
+              <height>18</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>55</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="inputMask">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string notr="true">0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonCorrigirHoraFotos">
+          <property name="minimumSize">
+           <size>
+            <width>175</width>
+            <height>28</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>175</width>
+            <height>28</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Corrigir hora nas fotos</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../../resources/resourcesIcon.qrc">
+            <normaloff>:/IconesMenu/document-open-recent.png</normaloff>:/IconesMenu/document-open-recent.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="TrataEventoLabelThumbnail" name="labelThumbnail">
+          <property name="minimumSize">
+           <size>
+            <width>175</width>
+            <height>125</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>175</width>
+            <height>125</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <property name="lineWidth">
+           <number>1</number>
+          </property>
+          <property name="midLineWidth">
+           <number>0</number>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonExibirFoto">
+          <property name="minimumSize">
+           <size>
+            <width>175</width>
+            <height>28</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>175</width>
+            <height>29</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Exibir Foto</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="TrataEventoLabelPaypal" name="labelPaypal">
+          <property name="minimumSize">
+           <size>
+            <width>175</width>
+            <height>88</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>175</width>
+            <height>88</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Clique aqui para fazer uma doação ao desenvolvedor do software</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <property name="text">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Verdana'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2';&quot;&gt;Faça uma doação pelo Paypal&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/IconesMenu/paypal.gif&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; color:#0000ff;&quot;&gt;Clique Aqui&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QProgressBar" name="progressBar">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>175</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>175</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+          <property name="textVisible">
+           <bool>true</bool>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>173</width>
+            <height>18</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonRemoverDadosExif">
+          <property name="minimumSize">
+           <size>
+            <width>175</width>
+            <height>28</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>175</width>
+            <height>28</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Remover Dados de Posição</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../../resources/resourcesIcon.qrc">
+            <normaloff>:/IconesMenu/list-remove.png</normaloff>:/IconesMenu/list-remove.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonPosicionarFotos">
+          <property name="minimumSize">
+           <size>
+            <width>175</width>
+            <height>28</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>175</width>
+            <height>28</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Posicionar Fotos</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../../resources/resourcesIcon.qrc">
+            <normaloff>:/IconesMenu/filefind.png</normaloff>:/IconesMenu/filefind.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="1" colspan="7">
+       <widget class="QTableWidget" name="tableWidgetLogGps">
+        <property name="minimumSize">
+         <size>
+          <width>350</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>150</height>
+         </size>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="7">
+       <widget class="TrataEventoTableWidgetJpeg" name="tableWidgetJpeg">
+        <property name="minimumSize">
+         <size>
+          <width>350</width>
+          <height>421</height>
+         </size>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="dragDropMode">
+         <enum>QAbstractItemView::NoDragDrop</enum>
+        </property>
+        <property name="sortingEnabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Verdana'; font-size:10pt;&quot;&gt;Site do desenvolvedor:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.adonai.eti.br&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.adonai.eti.br&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="2" column="5">
+       <widget class="QPushButton" name="pushButtonLimparListaArquivosImagens">
+        <property name="minimumSize">
+         <size>
+          <width>110</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>110</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Limpar Lista 
+de Fotos</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="6">
+       <widget class="QPushButton" name="pushButtonLimparListaArquivos">
+        <property name="minimumSize">
+         <size>
+          <width>110</width>
+          <height>33</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>110</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <italic>false</italic>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+          <stylestrategy>PreferAntialias</stylestrategy>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="mouseTracking">
+         <bool>false</bool>
+        </property>
+        <property name="acceptDrops">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>Limpar Lista de
+Fotos e Tracklogs</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="7">
+       <widget class="QPushButton" name="pushButtonFechar">
+        <property name="minimumSize">
+         <size>
+          <width>110</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>110</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Sair</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../../resources/resourcesIcon.qrc">
+          <normaloff>:/IconesMenu/error.png</normaloff>:/IconesMenu/error.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QPushButton" name="pushButtonRemoveGeoref">
+        <property name="minimumSize">
+         <size>
+          <width>110</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>110</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Remover Fotos 
+ Georeferenciadas</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QPushButton" name="pushButtonRemoveFileNoDate">
+        <property name="minimumSize">
+         <size>
+          <width>110</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>110</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Remover Fotos 
+ sem Data</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>880</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArquivo">
+    <property name="title">
+     <string>Arquivo</string>
+    </property>
+    <addaction name="actionAdicionar_logs"/>
+    <addaction name="actionAdicionar_Fotos"/>
+    <addaction name="actionAdicionar_Diretorios"/>
+    <addaction name="separator"/>
+    <addaction name="actionLimparListaImagens"/>
+    <addaction name="actionLimparListaArquivos"/>
+    <addaction name="separator"/>
+    <addaction name="actionSair"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuAjuda">
+    <property name="title">
+     <string>Ajuda</string>
+    </property>
+    <widget class="QMenu" name="menuTraducoes">
+     <property name="title">
+      <string>Traduções</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../../resources/resourcesIcon.qrc">
+       <normaloff>:/IconesMenu/config-language.png</normaloff>:/IconesMenu/config-language.png</iconset>
+     </property>
+     <addaction name="actionTraduzirEnglish"/>
+     <addaction name="actionTraduzirPortugues"/>
+     <addaction name="actionTraduzirSpanish"/>
+    </widget>
+    <addaction name="actionVisitar_o_Forum"/>
+    <addaction name="actionVisitarSiteDesenvolvedor"/>
+    <addaction name="actionVisitarSiteDoProjeto"/>
+    <addaction name="actionSolicitarMelhoriasNoSoftware"/>
+    <addaction name="actionInformarBugs"/>
+    <addaction name="separator"/>
+    <addaction name="actionSobre"/>
+    <addaction name="menuTraducoes"/>
+    <addaction name="separator"/>
+    <addaction name="actionVerificar_atualizacoes"/>
+    <addaction name="separator"/>
+    <addaction name="actionFazerDoacaoDesenvolvedor"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuExif">
+    <property name="title">
+     <string>Exif</string>
+    </property>
+    <addaction name="actionRemover_dados_Exif"/>
+    <addaction name="actionPosicionar_Fotos"/>
+   </widget>
+   <addaction name="menuArquivo"/>
+   <addaction name="menuExif"/>
+   <addaction name="menuAjuda"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSobre">
+   <property name="icon">
+    <iconset resource="../../resources/resourcesIcon.qrc">
+     <normaloff>:/IconesMenu/help-about.png</normaloff>:/IconesMenu/help-about.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sobre</string>
+   </property>
+  </action>
+  <action name="actionAdicionar_logs">
+   <property name="icon">
+    <iconset resource="../../resources/resourcesIcon.qrc">
+     <normaloff>:/IconesMenu/emblem-draft.png</normaloff>:/IconesMenu/emblem-draft.png</iconset>
+   </property>
+   <property name="text">
+    <string>Adicionar Tracklogs</string>
+   </property>
+  </action>
+  <action name="actionAdicionar_Fotos">
+   <property name="icon">
+    <iconset resource="../../resources/resourcesIcon.qrc">
+     <normaloff>:/IconesMenu/emblem-photos.png</normaloff>:/IconesMenu/emblem-photos.png</iconset>
+   </property>
+   <property name="text">
+    <string>Adicionar Fotos</string>
+   </property>
+  </action>
+  <action name="actionAdicionar_Diretorios">
+   <property name="icon">
+    <iconset resource="../../resources/resourcesIcon.qrc">
+     <normaloff>:/IconesMenu/oxyblue-folder-new.png</normaloff>:/IconesMenu/oxyblue-folder-new.png</iconset>
+   </property>
+   <property name="text">
+    <string>Adicionar Diretórios</string>
+   </property>
+  </action>
+  <action name="actionSair">
+   <property name="icon">
+    <iconset resource="../../resources/resourcesIcon.qrc">
+     <normaloff>:/IconesMenu/error.png</normaloff>:/IconesMenu/error.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sair</string>
+   </property>
+  </action>
+  <action name="actionRemover_dados_Exif">
+   <property name="icon">
+    <iconset resource="../../resources/resourcesIcon.qrc">
+     <normaloff>:/IconesMenu/list-remove.png</normaloff>:/IconesMenu/list-remove.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remover dados Exif</string>
+   </property>
+  </action>
+  <action name="actionPosicionar_Fotos">
+   <property name="icon">
+    <iconset resource="../../resources/resourcesIcon.qrc">
+     <normaloff>:/IconesMenu/filefind.png</normaloff>:/IconesMenu/filefind.png</iconset>
+   </property>
+   <property name="text">
+    <string>Posicionar Fotos</string>
+   </property>
+  </action>
+  <action name="actionLimparListaArquivos">
+   <property name="icon">
+    <iconset resource="../../resources/resourcesIcon.qrc">
+     <normaloff>:/IconesMenu/gtk-delete.png</normaloff>:/IconesMenu/gtk-delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Limpar Lista de Fotos e Tracklogs</string>
+   </property>
+  </action>
+  <action name="actionLimparListaImagens">
+   <property name="icon">
+    <iconset resource="../../resources/resourcesIcon.qrc">
+     <normaloff>:/IconesMenu/gtk-delete.png</normaloff>:/IconesMenu/gtk-delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Limpar Lista de Fotos</string>
+   </property>
+  </action>
+  <action name="actionVerificar_atualizacoes">
+   <property name="icon">
+    <iconset resource="../../resources/resourcesIcon.qrc">
+     <normaloff>:/IconesMenu/gl117.png</normaloff>:/IconesMenu/gl117.png</iconset>
+   </property>
+   <property name="text">
+    <string>Verificar Atualizações</string>
+   </property>
+  </action>
+  <action name="actionVisitar_o_Forum">
+   <property name="icon">
+    <iconset resource="../../resources/resourcesIcon.qrc">
+     <normaloff>:/IconesMenu/accessories-dictionary.png</normaloff>:/IconesMenu/accessories-dictionary.png</iconset>
+   </property>
+   <property name="text">
+    <string>Visitar o Fórum</string>
+   </property>
+  </action>
+  <action name="actionTraduzirEnglish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../resources/resourcesIcon.qrc">
+     <normaloff>:/IconesMenu/flag_eua.png</normaloff>:/IconesMenu/flag_eua.png</iconset>
+   </property>
+   <property name="text">
+    <string notr="true">English</string>
+   </property>
+   <property name="iconText">
+    <string notr="true">English</string>
+   </property>
+  </action>
+  <action name="actionTraduzirPortugues">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../resources/resourcesIcon.qrc">
+     <normaloff>:/IconesMenu/brasil_256.png</normaloff>:/IconesMenu/brasil_256.png</iconset>
+   </property>
+   <property name="text">
+    <string notr="true">Português - BR</string>
+   </property>
+   <property name="iconText">
+    <string notr="true">Português - BR</string>
+   </property>
+  </action>
+  <action name="actionTraduzirSpanish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../resources/resourcesIcon.qrc">
+     <normaloff>:/IconesMenu/flag_spain.png</normaloff>:/IconesMenu/flag_spain.png</iconset>
+   </property>
+   <property name="text">
+    <string notr="true">Español</string>
+   </property>
+   <property name="iconText">
+    <string notr="true">Español</string>
+   </property>
+  </action>
+  <action name="actionVisitarSiteDesenvolvedor">
+   <property name="text">
+    <string>Visitar Site do Desenvolvedor</string>
+   </property>
+  </action>
+  <action name="actionInformarBugs">
+   <property name="icon">
+    <iconset resource="../../resources/resourcesIcon.qrc">
+     <normaloff>:/IconesMenu/bugzilla.png</normaloff>:/IconesMenu/bugzilla.png</iconset>
+   </property>
+   <property name="text">
+    <string>Informar Defeitos (Bugs)</string>
+   </property>
+  </action>
+  <action name="actionFazerDoacaoDesenvolvedor">
+   <property name="icon">
+    <iconset resource="../../resources/resourcesIcon.qrc">
+     <normaloff>:/IconesMenu/PayPal_50x34.gif</normaloff>:/IconesMenu/PayPal_50x34.gif</iconset>
+   </property>
+   <property name="text">
+    <string>Fazer Doação ao Desenvolvedor</string>
+   </property>
+  </action>
+  <action name="actionVisitarSiteDoProjeto">
+   <property name="text">
+    <string>Visitar Site do Projeto</string>
+   </property>
+  </action>
+  <action name="actionSolicitarMelhoriasNoSoftware">
+   <property name="text">
+    <string>Solicitar Melhorias no Software</string>
+   </property>
+  </action>
+  <action name="actionWindows">
+   <property name="text">
+    <string>Windows</string>
+   </property>
+  </action>
+  <action name="actionWindows_XP">
+   <property name="text">
+    <string>Windows XP</string>
+   </property>
+  </action>
+  <action name="actionMotif">
+   <property name="text">
+    <string>Motif</string>
+   </property>
+  </action>
+  <action name="actionMacintosh">
+   <property name="text">
+    <string>Macintosh</string>
+   </property>
+  </action>
+  <action name="actionPlastique">
+   <property name="text">
+    <string>Plastique</string>
+   </property>
+  </action>
+  <action name="actionCDE">
+   <property name="text">
+    <string>CDE</string>
+   </property>
+  </action>
+  <action name="actionRemoverImagem">
+   <property name="icon">
+    <iconset resource="../../resources/resourcesIcon.qrc">
+     <normaloff>:/IconesMenu/error.png</normaloff>:/IconesMenu/error.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remover Imagem</string>
+   </property>
+   <property name="toolTip">
+    <string>Remover Imagem</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TrataEventoLabelThumbnail</class>
+   <extends>QLabel</extends>
+   <header>FormPrincipal/TrataEventoLabelThumbnail.h</header>
+  </customwidget>
+  <customwidget>
+   <class>TrataEventoLabelPaypal</class>
+   <extends>QLabel</extends>
+   <header>FormPrincipal/TrataEventoLabelPaypal.h</header>
+  </customwidget>
+  <customwidget>
+   <class>TrataEventoTableWidgetJpeg</class>
+   <extends>QTableWidget</extends>
+   <header>FormPrincipal/TrataEventoTableWidgetJpeg.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>pushButtonOpenLogGPS</tabstop>
+  <tabstop>pushButtonOpenJpeg</tabstop>
+  <tabstop>pushButtonOpenDirJpeg</tabstop>
+  <tabstop>checkBoxInclSubdir</tabstop>
+  <tabstop>checkBoxNaoAlteraDataArquivo</tabstop>
+  <tabstop>checkBoxInterpolarPontos</tabstop>
+  <tabstop>lineEditFusoHorario</tabstop>
+  <tabstop>lineEditToleranciaTempo</tabstop>
+  <tabstop>lineEditCorrecaoTempoFotos</tabstop>
+  <tabstop>pushButtonRemoverDadosExif</tabstop>
+  <tabstop>pushButtonPosicionarFotos</tabstop>
+  <tabstop>tableWidgetLogGps</tabstop>
+  <tabstop>tableWidgetJpeg</tabstop>
+  <tabstop>pushButtonLimparListaArquivos</tabstop>
+  <tabstop>pushButtonFechar</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../../resources/resourcesIcon.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButtonOpenLogGPS</sender>
+   <signal>clicked()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonOpenLogGPS_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>154</x>
+     <y>56</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>87</x>
+     <y>347</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonOpenJpeg</sender>
+   <signal>clicked()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonOpenJpeg_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>91</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>156</x>
+     <y>347</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonOpenDirJpeg</sender>
+   <signal>clicked()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonOpenDirJpeg_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>161</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>320</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonRemoverDadosExif</sender>
+   <signal>clicked()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonRemoverDadosExif_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>185</x>
+     <y>702</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>400</x>
+     <y>471</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonPosicionarFotos</sender>
+   <signal>clicked()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonPosicionarFotos_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>185</x>
+     <y>736</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>370</x>
+     <y>453</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonLimparListaArquivos</sender>
+   <signal>clicked()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonLimparListaArquivos_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>753</x>
+     <y>778</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>429</x>
+     <y>519</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonFechar</sender>
+   <signal>clicked()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>869</x>
+     <y>778</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>453</x>
+     <y>507</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSair</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>500</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAdicionar_logs</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonOpenLogGPS_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>500</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAdicionar_Fotos</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonOpenJpeg_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>500</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLimparListaArquivos</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonLimparListaArquivos_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>500</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonCorrigirHoraFotos</sender>
+   <signal>clicked()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonCorrigirHoraFotos_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>156</x>
+     <y>375</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>97</x>
+     <y>438</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSobre</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>exibirAbout()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>444</x>
+     <y>371</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonLimparListaArquivosImagens</sender>
+   <signal>clicked()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonLimparListaArquivosImagens_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>637</x>
+     <y>778</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>549</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLimparListaImagens</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonLimparListaArquivosImagens_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>427</x>
+     <y>293</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonExibirFoto</sender>
+   <signal>clicked()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonExibirFoto()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>162</x>
+     <y>540</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>136</x>
+     <y>554</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBoxHorarioDeVerao</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>atualizaFusoHorarioTrackLog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>32</x>
+     <y>282</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>268</x>
+     <y>25</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionVerificar_atualizacoes</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>verificarAtualizacoes()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>477</x>
+     <y>371</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionVisitar_o_Forum</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>visitarForum()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>477</x>
+     <y>371</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionPosicionar_Fotos</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonPosicionarFotos_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>477</x>
+     <y>371</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRemover_dados_Exif</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonRemoverDadosExif_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>477</x>
+     <y>371</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionTraduzirPortugues</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>traduzirPortugues()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>477</x>
+     <y>372</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionTraduzirSpanish</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>traduzirEspanhol()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>477</x>
+     <y>372</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionTraduzirEnglish</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>traduzirIngles()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>477</x>
+     <y>372</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAdicionar_Diretorios</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonOpenDirJpeg_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>477</x>
+     <y>372</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionInformarBugs</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>informarBugs()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>522</x>
+     <y>428</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSolicitarMelhoriasNoSoftware</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>solicitarMelhorias()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>522</x>
+     <y>428</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionVisitarSiteDesenvolvedor</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>visitarSiteDesenvolvedor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>522</x>
+     <y>428</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionVisitarSiteDoProjeto</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>visitarSiteProjeto()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>522</x>
+     <y>428</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFazerDoacaoDesenvolvedor</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>fazerDoacaoAoDesenvolvedor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>522</x>
+     <y>428</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEditToleranciaTempo</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>toleranciaTempoAlterada()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>185</x>
+     <y>309</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonRemoveGeoref</sender>
+   <signal>clicked()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonLimparArquivosGeoreferenciados_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>521</x>
+     <y>778</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>620</x>
+     <y>745</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRemoverImagem</sender>
+   <signal>triggered()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>openMenuTableWidgetJpeg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>372</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEditFusoHorario</sender>
+   <signal>lostFocus()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>atualizaFusoHorarioTrackLog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>146</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>246</x>
+     <y>748</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonRemoveFileNoDate</sender>
+   <signal>clicked()</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>pushButtonLimparArquivosSemData()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>317</x>
+     <y>765</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>278</x>
+     <y>778</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidgetJpeg</sender>
+   <signal>cellClicked(int,int)</signal>
+   <receiver>TelaPrincipal</receiver>
+   <slot>tableWidgetJpegExibirThumbnail(int,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>531</x>
+     <y>430</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>372</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>pushButtonOpenLogGPS_Click()</slot>
+  <slot>pushButtonOpenJpeg_Click()</slot>
+  <slot>pushButtonOpenDirJpeg_Click()</slot>
+  <slot>pushButtonRemoverDadosExif_Click()</slot>
+  <slot>pushButtonPosicionarFotos_Click()</slot>
+  <slot>pushButtonLimparListaArquivos_Click()</slot>
+  <slot>pushButtonCorrigirHoraFotos_Click()</slot>
+  <slot>exibirAbout()</slot>
+  <slot>pushButtonLimparListaArquivosImagens_Click()</slot>
+  <slot>tableWidgetJpegExibirThumbnail(int,int)</slot>
+  <slot>pushButtonExibirFoto()</slot>
+  <slot>atualizaFusoHorarioTrackLog(bool)</slot>
+  <slot>atualizaFusoHorarioTrackLog()</slot>
+  <slot>verificarAtualizacoes()</slot>
+  <slot>visitarForum()</slot>
+  <slot>abrirTraducoes()</slot>
+  <slot>traduzirIngles()</slot>
+  <slot>traduzirEspanhol()</slot>
+  <slot>traduzirPortugues()</slot>
+  <slot>informarBugs()</slot>
+  <slot>solicitarMelhorias()</slot>
+  <slot>visitarSiteProjeto()</slot>
+  <slot>visitarSiteDesenvolvedor()</slot>
+  <slot>fazerDoacaoAoDesenvolvedor()</slot>
+  <slot>toleranciaTempoAlterada()</slot>
+  <slot>pushButtonLimparArquivosGeoreferenciados_Click()</slot>
+  <slot>openMenuTableWidgetJpeg()</slot>
+  <slot>pushButtonLimparArquivosSemData()</slot>
+ </slots>
+</ui>

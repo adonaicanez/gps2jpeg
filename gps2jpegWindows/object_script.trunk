@@ -1,0 +1,14 @@
+INPUT(
+./build/Debug/MinGW-Windows/PeriodoTracklog.o
+./build/Debug/MinGW-Windows/TelaPrincipal.o
+./build/Debug/MinGW-Windows/ReadFileGps.o
+./build/Debug/MinGW-Windows/ManipulaExifFotos.o
+./build/Debug/MinGW-Windows/PeriodoDia.o
+./build/Debug/MinGW-Windows/main.o
+./build/Debug/MinGW-Windows/GpsPosition.o
+./build/Debug/MinGW-Windows/calculaTempo.o
+./build/Debug/MinGW-Windows/PeriodoMes.o
+./build/Debug/MinGW-Windows/PeriodoAno.o
+./build/Debug/MinGW-Windows/moc_TelaPrincipal.o
+./build/Debug/MinGW-Windows/qrc_resourcesIcon.o
+);
