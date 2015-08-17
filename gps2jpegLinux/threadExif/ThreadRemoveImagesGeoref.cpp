@@ -23,7 +23,7 @@
 
 #include "ThreadRemoveImagesGeoref.h"
 
-#include <QtGui/QTableWidget>
+#include <QtWidgets/QTableWidget>
 
 ThreadRemoveImagesGeoref::ThreadRemoveImagesGeoref(QObject *parent) : QThread(parent) {
 }

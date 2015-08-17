@@ -24,10 +24,11 @@
 
 #include <QtCore/QUrl>
 #include <QtCore/QFileInfo>
-#include <QtGui/QDialogButtonBox>
-#include <QtGui/QProgressDialog>
-#include <QtGui/QMessageBox>
-#include <QtNetwork/QHttp>
+#include <QtWidgets/QDialogButtonBox>
+#include <QtWidgets/QProgressDialog>
+#include <QtWidgets/QMessageBox>
+//#include <QtNetwork/QHttp>
+#include <QtNetwork/QNetworkAccessManager>
 
 #include "ui_VerificarAtualizacoes.h"
 
@@ -39,15 +40,15 @@ public:
 
 private slots:
     void downloadFile();
-    void httpRequestFinished(int requestId, bool error);
-    void readResponseHeader(const QHttpResponseHeader &responseHeader);
+ //   void httpRequestFinished(int requestId, bool error);
+//    void readResponseHeader(const QHttpResponseHeader &responseHeader);
     void updateDataReadProgress(int bytesRead, int totalBytes);
     
 private:
     Ui::VerificarAtualizacoes widget;
     QProgressDialog *progressDialog;
     QDialogButtonBox *buttonBox;
-    QHttp *http;
+ //   QHttp *http;
     QFile *file;
     int httpGetId;
     bool httpRequestAborted;

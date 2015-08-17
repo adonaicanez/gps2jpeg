@@ -1,10 +1,18 @@
+Versão 5.0 - 17/03/2015
+* Novas funcionalidades
+	
+
+* Bugs Corrigidos 
+	- A remoção dos dados de GPS são estava removendo os metadadados GPSImgDirectionRef, GPSImgDirection e GPSProcessingMethod.
+-------------------------------------------------------------------------------
+	
 Versão 4.0 - 21/09/2011
 * Novas Funcionalidades
     - Foi adicionado um botão para remover da lista de fotos as imagens que que não possuem informação de data. Processo realizado por uma thread separada da interface.
     - Adicionado o salvamento e exclusão de outras metatags: Exif.GPSInfo.GPSTimeStamp, Exif.GPSInfo.GPSDateStamp, Exif.GPSInfo.GPSVersionID, Exif.GPSInfo.GPSMapDatum
     - A compilação da biblioteca Qt foi alterado para estático.
 * Bugs Corrigidos
-    - Quando mandava posicionar alguma imagem que tinha a data fora do perido do tracklog, éra exibido os segundos do ponto mais proximo com o valor errado, agora foi criada uma nova mensgem que informa que a data da imagem esta fora do perido do tracklog.
+    - Quando mandava posicionar alguma imagem que tinha a data fora do perido do tracklog, éra exibido os segundos do ponto mais proximo com o valor errado, agora foi criada uma nova mensagem que informa que a data da imagem esta fora do perido do tracklog.
     - Deixava o campo da altitude em branco quando o valor era zero.
     - Sempre mostrava o valor da altitude como positivo.
     - Não mostrava a latitude quando o valor era positivo.

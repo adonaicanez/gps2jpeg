@@ -35,7 +35,7 @@ public:
     PeriodoMes(int mes);
     ~PeriodoMes();
     void insereGpsPosition(GpsPosition *gpsPosition);
-    GpsPosition *procuraGpsPosition(QDateTime dataHora, uint segundosTolerancia, uint &menorTolerancia, int &status);
+    GpsPosition *procuraGpsPosition(QDateTime dataHora, int segundosTolerancia, int &menorTolerancia, int &status);
     int getMes();
 private:
     int mes;

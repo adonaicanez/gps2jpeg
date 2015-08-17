@@ -24,7 +24,7 @@
 #ifndef GRAPHICSSCENE_H
 #define	GRAPHICSSCENE_H
 
-#include <QtGui/QGraphicsScene>
+#include <QtWidgets/QGraphicsScene>
 
 class GraphicsScene : public QGraphicsScene {
     Q_OBJECT

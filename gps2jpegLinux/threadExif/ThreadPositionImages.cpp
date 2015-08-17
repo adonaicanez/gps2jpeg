@@ -30,11 +30,11 @@
 #include <QtCore/QDir>
 #include <QtCore/QFileInfo>
 #include <QtCore/QString>
-#include <QtGui/QApplication>
-#include <QtGui/QTableWidget>
-#include <QtGui/QProgressBar>
-#include <QtGui/QLineEdit>
-#include <QtGui/QCheckBox>
+#include <QApplication>
+#include <QtWidgets/QTableWidget>
+#include <QtWidgets/QProgressBar>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QCheckBox>
 
 #include <cassert>
 #include <math.h>
@@ -49,7 +49,7 @@ void ThreadPositionImages::run() {
     QDateTime dataHoraCorrigida, dataHoraCorrigidaGMT;
     QString itemLatitude, itemLongitude, itemAltitude, itemStatus;
     GpsPosition *posicaoLocalizada;
-    uint menorTolerancia;
+    int menorTolerancia;
     int status;
     QVector<QString> listErrorRemoveFile;
     QVector<int> listErrorRemoveFilePosition;
@@ -62,7 +62,6 @@ void ThreadPositionImages::run() {
     for (int i = 0; i < tableWidgetJpeg->rowCount(); i++) {
         bool dateOk = false;
         emit progressBarValue(i);
-        //      usleep(50000);
         if (tableWidgetJpeg->item(i, 2) != 0) {
             dataHoraCorrigida = QDateTime::fromString(tableWidgetJpeg->item(i, 2)->text(), "dd/MM/yyyy hh:mm:ss");
             dateOk = true;

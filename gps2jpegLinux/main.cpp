@@ -21,16 +21,11 @@
  * along with gps2jpeg.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <QtGui/QApplication>
+#include <QApplication>
 #include <QtCore/QTranslator>
 #include <QtCore/QCoreApplication>
 #include <QtCore/QSettings>
-#include <QtGui/QMacStyle>
-#include <QtGui/QMotifStyle>
-#include <QtGui/QPlastiqueStyle>
-#include <QtGui/QCleanlooksStyle>
-#include <QtGui/QWindowsXPStyle>
-
+#include <QtWidgets/QStyle>
 
 #include "Forms/FormPrincipal/TelaPrincipal.h"
 #include "DadosArquivoGps.h"
@@ -40,12 +35,11 @@ int main(int argc, char** argv) {
     Q_INIT_RESOURCE(translations);
 
     QApplication app(argc, argv);
-  //  QApplication::setStyle(new QWindowsXPStyle);
 
     QApplication::setOrganizationName("Adonai Silveira Canez");
     QApplication::setOrganizationDomain("http://www.adonai.eti.br");
     QApplication::setApplicationName("gps2jpeg");
-    QApplication::setApplicationVersion("4.1");
+    QApplication::setApplicationVersion("5.0");
 
     QSettings settings;
 

@@ -24,7 +24,7 @@
 #ifndef GRAPHICSVIEW_H
 #define	GRAPHICSVIEW_H
 
-#include <QtGui/QGraphicsView>
+#include <QtWidgets/QGraphicsView>
 
 #include "GraphicsScene.h"
 

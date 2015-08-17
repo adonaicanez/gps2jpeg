@@ -25,8 +25,8 @@
 #include "TelaPrincipal.h"
 
 #include <QtGui/QMouseEvent>
-#include <QtGui/QMenu>
-#include <QtGui/QAction>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QAction>
 
 #include <QtCore/QEventLoop>
 #include <iostream>

@@ -25,9 +25,9 @@
 #include "DadosArquivoGps.h"
 
 #include <QtCore/QDir>
-#include <QtGui/QApplication>
-#include <QtGui/QTableWidget>
-#include <QtGui/QProgressBar>
+#include <QApplication>
+#include <QtWidgets/QTableWidget>
+#include <QtWidgets/QProgressBar>
 
 #include <cassert>
 #include <math.h>
@@ -59,7 +59,6 @@ void ThreadRemoveExifDatas::run() {
     for (int i = 0; i < tableWidgetJpeg->rowCount(); i++) {
         try {
             emit progressBarValue(i);
-            //  usleep(50000);
             Exiv2::Image::AutoPtr image;
 
             image = Exiv2::ImageFactory::open(tableWidgetJpeg->item(i, 7)->text().toStdString().c_str());
@@ -138,6 +137,27 @@ void ThreadRemoveExifDatas::run() {
                     exifRemovido = true;
                 }
 
+                keyRemove = new Exiv2::ExifKey("Exif.GPSInfo.GPSImgDirectionRef");
+                keyIteratorRemove = exifData.findKey(*keyRemove);
+                if (keyIteratorRemove != exifData.end()) {
+                    exifData.erase(keyIteratorRemove);
+                    exifRemovido = true;
+                }
+                
+                keyRemove = new Exiv2::ExifKey("Exif.GPSInfo.GPSImgDirection");
+                keyIteratorRemove = exifData.findKey(*keyRemove);
+                if (keyIteratorRemove != exifData.end()) {
+                    exifData.erase(keyIteratorRemove);
+                    exifRemovido = true;
+                }
+
+                keyRemove = new Exiv2::ExifKey("Exif.GPSInfo.GPSProcessingMethod");
+                keyIteratorRemove = exifData.findKey(*keyRemove);
+                if (keyIteratorRemove != exifData.end()) {
+                    exifData.erase(keyIteratorRemove);
+                    exifRemovido = true;
+                }                
+                
                 if (exifRemovido) {
                     QString softwareTag = QApplication::applicationName();
                     softwareTag += " ";
@@ -188,7 +208,7 @@ void ThreadRemoveExifDatas::run() {
     }
 
     for (int i = 0; i < listErrorRemoveFile.size(); i++) {
-        //precisa pesquisar no disco se tem outro arquivo com o nome igual mas com a estensão diferente
+        //precisa pesquisar no disco se tem outro arquivo com o nome igual mas com a extensão diferente
         // se achar, tem que remover o atual e renomear o outro arquivo.
         QString fileName;
         QString filePath;

@@ -62,7 +62,7 @@ void PeriodoTracklog::insereGpsPosition(GpsPosition *gpsPosition) {
  *                 10 - caso o valor esteja fora da faixa de periodo do tracklog
  * @return
  */
-GpsPosition *PeriodoTracklog::procuraGpsPosition(QDateTime dataHora, uint segundosTolerancia, uint &menorTolerancia, int &status){
+GpsPosition *PeriodoTracklog::procuraGpsPosition(QDateTime dataHora, int &segundosTolerancia, int &menorTolerancia, int &status){
 //    int dia, mes, ano, hora, minuto, segundo;
 
     int ano;

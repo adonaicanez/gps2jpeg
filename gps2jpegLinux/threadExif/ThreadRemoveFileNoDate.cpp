@@ -23,7 +23,7 @@
 
 #include "ThreadRemoveFileNoDate.h"
 
-#include <QtGui/QTableWidget>
+#include <QtWidgets/QTableWidget>
 
 ThreadRemoveFileNoDate::ThreadRemoveFileNoDate(QObject *parent) : QThread(parent) {
 }

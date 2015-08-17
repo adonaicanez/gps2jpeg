@@ -24,7 +24,7 @@
 #ifndef _TRATAEVENTOLABELPAYPAL_H
 #define	_TRATAEVENTOLABELPAYPAL_H
 
-#include <QtGui/QLabel>
+#include <QtWidgets/QLabel>
 
 class TrataEventoLabelPaypal : public QLabel {
     Q_OBJECT

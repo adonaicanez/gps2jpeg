@@ -26,7 +26,7 @@ VerificarAtualizacoes::VerificarAtualizacoes(QWidget *parent) : QDialog(parent) 
 
     buttonBox = new QDialogButtonBox;
     progressDialog = new QProgressDialog(this);
-    http = new QHttp(this);
+//    http = new QHttp(this);
 
     QString versaoInstal("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">"
             "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">"
@@ -40,12 +40,13 @@ VerificarAtualizacoes::VerificarAtualizacoes(QWidget *parent) : QDialog(parent) 
     versaoInstal.append("</span></p></body></html>");
     widget.labelVersaoInstalada->setText(versaoInstal);
 
-    connect(http, SIGNAL(requestFinished(int, bool)), this, SLOT(httpRequestFinished(int, bool)));
-    connect(http, SIGNAL(dataReadProgress(int, int)), this, SLOT(updateDataReadProgress(int, int)));
-    connect(http, SIGNAL(responseHeaderReceived(const QHttpResponseHeader &)), this, SLOT(readResponseHeader(const QHttpResponseHeader &)));
+//    connect(http, SIGNAL(requestFinished(int, bool)), this, SLOT(httpRequestFinished(int, bool)));
+//    connect(http, SIGNAL(dataReadProgress(int, int)), this, SLOT(updateDataReadProgress(int, int)));
+//    connect(http, SIGNAL(responseHeaderReceived(const QHttpResponseHeader &)), this, SLOT(readResponseHeader(const QHttpResponseHeader &)));
 }
 
 void VerificarAtualizacoes::downloadFile() {
+/*
     QUrl url("http://www.adonai.eti.br/gps2jpeg/gps2jpeg.txt");
     QFileInfo fileInfo(url.path());
     QString fileName = fileInfo.fileName();
@@ -65,7 +66,7 @@ void VerificarAtualizacoes::downloadFile() {
         return;
     }
 
-    QHttp::ConnectionMode mode = url.scheme().toLower() == "https" ? QHttp::ConnectionModeHttps : QHttp::ConnectionModeHttp;
+//    QHttp::ConnectionMode mode = url.scheme().toLower() == "https" ? QHttp::ConnectionModeHttps : QHttp::ConnectionModeHttp;
     http->setHost(url.host(), mode, url.port() == -1 ? 0 : url.port());
 
     if (!url.userName().isEmpty())
@@ -109,8 +110,9 @@ void VerificarAtualizacoes::httpRequestFinished(int requestId, bool error) {
 
 
     lerArquivoAtualizacao();
-}
-
+*/
+ }
+/*
 void VerificarAtualizacoes::readResponseHeader(const QHttpResponseHeader &responseHeader) {
     switch (responseHeader.statusCode()) {
         case 200: // Ok
@@ -129,7 +131,7 @@ void VerificarAtualizacoes::readResponseHeader(const QHttpResponseHeader &respon
             http->abort();
     }
 }
-
+*/
 void VerificarAtualizacoes::updateDataReadProgress(int bytesRead, int totalBytes) {
     if (httpRequestAborted)
         return;

@@ -24,7 +24,7 @@
 #include "ManipulaExifFotos.h"
 #include "PeriodoTracklog.h"
 
-#include <QtGui/QTableWidgetItem>
+//#include <QtGui/QTableWidgetItem>
 #include <QtCore/QVariant>
 
 #include <cassert>
@@ -48,10 +48,10 @@ bool ManipulaExifFotos::insereCoordenadasFoto(QString nomeFoto, int segundosTole
 #ifdef Q_WS_WIN
     Exiv2::Image::AutoPtr image = Exiv2::ImageFactory::open(nomeFoto.toStdString().c_str());
 #endif
-#ifdef Q_WS_X11
+//#ifdef Q_WS_X11
     QString nomeUtf(nomeFoto.toUtf8());
     Exiv2::Image::AutoPtr image = Exiv2::ImageFactory::open(nomeUtf.toStdString().c_str());
-#endif
+//#endif
 
     assert(image.get() != 0);
     image->readMetadata();
@@ -66,8 +66,8 @@ bool ManipulaExifFotos::insereCoordenadasFoto(QString nomeFoto, int segundosTole
             if (tagExiv.operator ==("Exif.Photo.DateTimeOriginal")) {
                 GpsPosition *posicaoLocalizada;
 
-                int menorTolerancia;
-                posicaoLocalizada = periodoTrackLog->procuraGpsPosition(dataHoraCorrigida, segundosTolerancia, menorTolerancia);
+                int menorTolerancia, status;
+                posicaoLocalizada = periodoTrackLog->procuraGpsPosition(dataHoraCorrigida, segundosTolerancia, menorTolerancia, status);
 
                 if (posicaoLocalizada != NULL) {
                     QString latitudeExif, latitudeExifRef, longitudeExif, longitudeExifRef;

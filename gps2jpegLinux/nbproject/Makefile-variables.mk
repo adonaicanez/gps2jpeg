@@ -7,21 +7,21 @@ CND_BASEDIR=`pwd`
 CND_BUILDDIR=build
 CND_DISTDIR=dist
 # Debug configuration
-CND_PLATFORM_Debug=
-CND_ARTIFACT_DIR_Debug=dist/Debug/
+CND_PLATFORM_Debug=GNU-Linux-x86
+CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux-x86
 CND_ARTIFACT_NAME_Debug=gps2jpegLinuxD
-CND_ARTIFACT_PATH_Debug=dist/Debug//gps2jpegLinuxD
-CND_PACKAGE_DIR_Debug=dist/Debug//package
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/gps2jpegLinuxD
+CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux-x86/package
 CND_PACKAGE_NAME_Debug=gps2jpegLinux.tar
-CND_PACKAGE_PATH_Debug=dist/Debug//package/gps2jpegLinux.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/gps2jpegLinux.tar
 # Release configuration
-CND_PLATFORM_Release=MinGW_4.9.1-Windows
-CND_ARTIFACT_DIR_Release=dist/Release/MinGW_4.9.1-Windows
+CND_PLATFORM_Release=GNU-Linux-x86
+CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux-x86
 CND_ARTIFACT_NAME_Release=gps2jpegLinux
-CND_ARTIFACT_PATH_Release=dist/Release/MinGW_4.9.1-Windows/gps2jpegLinux
-CND_PACKAGE_DIR_Release=dist/Release/MinGW_4.9.1-Windows/package
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/gps2jpegLinux
+CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux-x86/package
 CND_PACKAGE_NAME_Release=gps2jpegLinux.tar
-CND_PACKAGE_PATH_Release=dist/Release/MinGW_4.9.1-Windows/package/gps2jpegLinux.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/gps2jpegLinux.tar
 #
 # include compiler specific variables
 #

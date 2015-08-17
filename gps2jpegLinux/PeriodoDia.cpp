@@ -41,7 +41,7 @@ void PeriodoDia::insereGpsPosition(GpsPosition *gpsPosition) {
     listaPosicaoGps.push_back(gpsPosition);
 }
 
-GpsPosition *PeriodoDia::procuraGpsPosition(QDateTime dataHora, uint segundosTolerancia, uint &menorTolerancia, int &status) {
+GpsPosition *PeriodoDia::procuraGpsPosition(QDateTime dataHora, int segundosTolerancia, int &menorTolerancia, int &status) {
     GpsPosition *resultado;
     qulonglong resultadoSegundos,diferencaSegundos;
 

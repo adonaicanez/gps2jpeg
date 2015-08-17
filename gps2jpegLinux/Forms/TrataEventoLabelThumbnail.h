@@ -24,7 +24,7 @@
 #ifndef _TRATAEVENTOLABELTHUMBNAIL_H
 #define	_TRATAEVENTOLABELTHUMBNAIL_H
 
-#include <QtGui/QLabel>
+#include <QtWidgets/QLabel>
 
 class TrataEventoLabelThumbnail : public QLabel {
     Q_OBJECT

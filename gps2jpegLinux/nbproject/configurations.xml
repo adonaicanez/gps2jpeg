@@ -43,9 +43,6 @@
     </logicalFolder>
     <logicalFolder name="f1" displayName="Formularios" projectFiles="true">
       <logicalFolder name="f3" displayName="Adiciona Metadados" projectFiles="true">
-        <itemPath>Forms/AddMetadata/AddMetadata.cpp</itemPath>
-        <itemPath>Forms/AddMetadata/AddMetadata.h</itemPath>
-        <itemPath>Forms/AddMetadata/AddMetadata.ui</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Tela Exibe Imagem" projectFiles="true">
         <logicalFolder name="f3" displayName="Form" projectFiles="true">
@@ -112,6 +109,7 @@
                      displayName="Remove Images Georeferenciadas"
                      projectFiles="true">
         <itemPath>threadExif/ThreadRemoveImagesGeoref.cpp</itemPath>
+        <itemPath>threadExif/ThreadRemoveImagesGeoref.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="f2" displayName="Traduções" projectFiles="true">
@@ -179,12 +177,6 @@
       <item path="DadosArquivoGps.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="DadosArquivoGps.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Forms/AddMetadata/AddMetadata.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Forms/AddMetadata/AddMetadata.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Forms/AddMetadata/AddMetadata.ui" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Forms/ExibeFoto.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -321,6 +313,11 @@
             tool="1"
             flavor2="0">
       </item>
+      <item path="threadExif/ThreadRemoveImagesGeoref.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="translations/linguagem_en_US.ts" ex="false" tool="3" flavor2="0">
       </item>
       <item path="translations/linguagem_es.ts" ex="false" tool="3" flavor2="0">
@@ -336,9 +333,9 @@
       </toolsSet>
       <qt>
         <target>gps2jpegLinux</target>
-        <version>3.3</version>
+        <version>5.0</version>
         <buildMode>1</buildMode>
-        <modules>core gui network</modules>
+        <modules>core gui widgets network</modules>
         <mocDir>./temp</mocDir>
         <rccDir>./temp</rccDir>
         <uiDir>./temp</uiDir>
@@ -365,6 +362,7 @@
         <linkerTool>
           <linkerLibItems>
             <linkerLibLibItem>exiv2</linkerLibLibItem>
+            <linkerLibLibItem>exiv2</linkerLibLibItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
@@ -382,12 +380,6 @@
       <item path="DadosArquivoGps.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="DadosArquivoGps.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Forms/AddMetadata/AddMetadata.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Forms/AddMetadata/AddMetadata.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Forms/AddMetadata/AddMetadata.ui" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Forms/ExibeFoto.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -518,6 +510,11 @@
       <item path="threadExif/ThreadRemoveImagesGeoref.cpp"
             ex="false"
             tool="1"
+            flavor2="0">
+      </item>
+      <item path="threadExif/ThreadRemoveImagesGeoref.h"
+            ex="false"
+            tool="3"
             flavor2="0">
       </item>
       <item path="translations/linguagem_en_US.ts" ex="false" tool="3" flavor2="0">

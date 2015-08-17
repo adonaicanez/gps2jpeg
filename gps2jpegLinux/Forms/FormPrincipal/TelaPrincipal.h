@@ -34,7 +34,8 @@
 #include <QtCore/QString>
 #include <QtCore/QStringList>
 #include <QtCore/QDateTime>
-#include <QtGui/QMainWindow>
+#include <QtWidgets/QMainWindow>
+#include <QtCore/QTranslator>
 
 class ReadFileGps;
 class PeriodoTracklog;

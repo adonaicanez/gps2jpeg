@@ -23,13 +23,13 @@
 
 #include "ExibeFoto.h"
 #include "threadExif/ThreadPositionImages.h"
-#include "AddMetadata/AddMetadata.h"
+//#include "AddMetadata/AddMetadata.h"
 #include "DadosArquivoGps.h"
 
 #include <QtCore/QSize>
-#include <QtGui/QWidget>
+#include <QtWidgets/QWidget>
 #include <QtGui/QWheelEvent>
-#include <QtGui/QMessageBox>
+#include <QtWidgets/QMessageBox>
 
 #include <cassert>
 #include <math.h>
@@ -63,13 +63,13 @@ ExibeFoto::~ExibeFoto() {
 }
 
 void ExibeFoto::readExifData() {
-    widget.treeWidgetExif->header()->setResizeMode(QHeaderView::ResizeToContents);
+    //widget.treeWidgetExif->header()->setResizeMode(QHeaderView::ResizeToContents);
     Exiv2::Image::AutoPtr imageExiv;
     try {
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
         imageExiv = Exiv2::ImageFactory::open(path.toStdString().c_str());
 #endif
-#ifdef Q_WS_X11
+#ifdef Q_OS_LINUX
         QString nomeUtf(path.toUtf8());
         imageExiv = Exiv2::ImageFactory::open(nomeUtf.toStdString().c_str());
 #endif
@@ -83,10 +83,10 @@ void ExibeFoto::readExifData() {
             QTreeWidgetItem *treeItem, *treeItemChild;
             treeItem = NULL;
             for (Exiv2::ExifData::const_iterator i = exifData.begin(); i != end; ++i) {
-                QString sKeyTree(QString::fromAscii(i->key().c_str()).midRef(5).toString());
+                QString sKeyTree(QString::fromLatin1(i->key().c_str()).midRef(5).toString());
                 tipoNovo = sKeyTree.left(sKeyTree.indexOf('.'));
                 descricao = sKeyTree.right(sKeyTree.size() - sKeyTree.indexOf('.') - 1);
-                value = QString::fromAscii(i->value().toString().c_str());
+                value = QString::fromLatin1(i->value().toString().c_str());
                 treeItem = widget.treeWidgetExif->findItems(tipoNovo, Qt::MatchExactly).at(0);
                 if (treeItem == NULL) {
                     tipoAtual.operator =(tipoNovo);
@@ -131,13 +131,13 @@ void ExibeFoto::readExifData() {
 }
 
 void ExibeFoto::readIptcData() {
-    widget.treeWidgetIptc->header()->setResizeMode(QHeaderView::ResizeToContents);
+//    widget.treeWidgetIptc->header()->setResizeMode(QHeaderView::ResizeToContents);
 
     try {
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
         Exiv2::Image::AutoPtr imageExiv = Exiv2::ImageFactory::open(path.toStdString().c_str());
 #endif
-#ifdef Q_WS_X11
+#ifdef Q_OS_LINUX
         QString nomeUtf(path.toUtf8());
         Exiv2::Image::AutoPtr imageExiv = Exiv2::ImageFactory::open(nomeUtf.toStdString().c_str());
 #endif
@@ -151,10 +151,10 @@ void ExibeFoto::readIptcData() {
             QTreeWidgetItem *treeItem, *treeItemChild;
             treeItem = NULL;
             for (Exiv2::IptcData::iterator md = iptcData.begin(); md != end; md++) {
-                QString sKeyTree(QString::fromAscii(md->key().c_str()).midRef(5).toString());
+                QString sKeyTree(QString::fromLatin1(md->key().c_str()).midRef(5).toString());
                 tipoNovo = sKeyTree.left(sKeyTree.indexOf('.'));
                 descricao = sKeyTree.right(sKeyTree.size() - sKeyTree.indexOf('.') - 1);
-                value = QString::fromAscii(md->value().toString().c_str());
+                value = QString::fromLatin1(md->value().toString().c_str());
                 treeItem = widget.treeWidgetIptc->findItems(tipoNovo, Qt::MatchExactly).at(0);
                 if (treeItem == NULL) {
                     tipoAtual.operator =(tipoNovo);
@@ -201,13 +201,13 @@ void ExibeFoto::readIptcData() {
 }
 
 void ExibeFoto::readXmpData() {
-    widget.treeWidgetXmp->header()->setResizeMode(QHeaderView::ResizeToContents);
+//    widget.treeWidgetXmp->header()->setResizeMode(QHeaderView::ResizeToContents);
 
     try {
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
         Exiv2::Image::AutoPtr imageXmp = Exiv2::ImageFactory::open(path.toStdString().c_str());
 #endif
-#ifdef Q_WS_X11
+#ifdef Q_OS_LINUX
         QString nomeUtf(path.toUtf8());
         Exiv2::Image::AutoPtr imageXmp = Exiv2::ImageFactory::open(nomeUtf.toStdString().c_str());
 #endif
@@ -268,7 +268,7 @@ void ExibeFoto::readXmpData() {
         }
     }
 }
-
+/*
 void ExibeFoto::formEditMetadatas() {
     AddMetadata *addMetadata = new AddMetadata(this);
     addMetadata->showMaximized();
@@ -277,7 +277,7 @@ void ExibeFoto::formEditMetadatas() {
     ev->exec(QEventLoop::DialogExec);
     delete addMetadata;
 }
-
+*/
 void ExibeFoto::fechar() {
     emit fechaExibeFoto();
 }

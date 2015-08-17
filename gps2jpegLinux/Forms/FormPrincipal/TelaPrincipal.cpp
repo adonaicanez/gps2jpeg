@@ -26,7 +26,7 @@
 #include "PeriodoTracklog.h"
 #include "ExibeFoto.h"
 #include "TrataEventoLabelThumbnail.h"
-#include "VerificarAtualizacoes.h"
+//#include "VerificarAtualizacoes.h"
 #include "threadExif/ThreadRemoveImagesGeoref.h"
 
 #include <QtCore/QUrl>
@@ -34,9 +34,9 @@
 #include <QtCore/QTranslator>
 #include <QtCore/QSettings>
 
-#include <QtGui/QTableWidgetItem>
-#include <QtGui/QFileDialog>
-#include <QtGui/QMessageBox>
+#include <QtWidgets/QTableWidgetItem>
+#include <QtWidgets/QFileDialog>
+#include <QtWidgets/QMessageBox>
 #include <QtGui/QDesktopServices>
 
 #include <QtCore/QEventLoop>
@@ -206,11 +206,11 @@ void TelaPrincipal::pushButtonOpenLogGPS_Click() {
 
 void TelaPrincipal::pushButtonOpenJpeg_Click() {
     QSettings settings;
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
     QStringList arquivosImagens = QFileDialog::getOpenFileNames(this, trUtf8("Selecione os arquivos"), settings.value("pathFileJpeg").toString(),
             "Imagens jpeg (*.jpeg *.jpg);;Imagens png (*.png);;Imagens tiff (*.tiff *.tif);;Imagens pgf(*.pgf);;Imagens psd(*.psd)");
 #endif
-#ifdef Q_WS_X11
+#ifdef Q_OS_LINUX
     QStringList arquivosImagens = QFileDialog::getOpenFileNames(this, trUtf8("Selecione os arquivos"), settings.value("pathFileJpeg").toString(), trUtf8(
             "Imagens JPEG(*.JPEG *.jpeg *.JPG *.jpg);;Imagens png (*.PNG *.png);;Imagens tiff (*.TIFF *.tiff);;Imagens pgf(*.pgf *.PGF);;Imagens psd(*.psd *.PSD)"));
 #endif
@@ -318,7 +318,9 @@ void TelaPrincipal::pushButtonLimparListaArquivosImagens_Click() {
     }
     widget.tableWidgetJpeg->clearContents();
     widget.tableWidgetJpeg->setRowCount(0);
-    widget.labelThumbnail->setPixmap(0);
+    QPixmap *pix;
+    pix = new QPixmap();
+    widget.labelThumbnail->setPixmap(*pix);
     delete imagemOriginal;
     imagemOriginal = NULL;
 }
@@ -367,7 +369,7 @@ void TelaPrincipal::exibirAbout() {
 }
 
 void TelaPrincipal::tableWidgetJpegExibirThumbnail(int row, int /*column*/) {
-    QPixmap imagemRedimensionada;
+    QPixmap imagemRedimensionada, *pix;
     QSize tamanhoMiniatura(175, 125);
     caminhoArquivoFoto = widget.tableWidgetJpeg->item(row, 7)->text();
     if (imagemOriginal != NULL) {
@@ -380,7 +382,8 @@ void TelaPrincipal::tableWidgetJpegExibirThumbnail(int row, int /*column*/) {
         widget.labelThumbnail->setPixmap(imagemRedimensionada);
     } else {
         imagemOriginal = NULL;
-        widget.labelThumbnail->setPixmap(NULL);
+        pix = new QPixmap();
+        widget.labelThumbnail->setPixmap(*pix);
     }
 }
 
@@ -462,9 +465,9 @@ void TelaPrincipal::atualizaFusoHorarioTrackLog() {
 }
 
 void TelaPrincipal::verificarAtualizacoes() {
-    VerificarAtualizacoes *formVerificaAtualizacoes = new VerificarAtualizacoes(this);
-    formVerificaAtualizacoes->show();
-    formVerificaAtualizacoes->exec();
+//    VerificarAtualizacoes *formVerificaAtualizacoes = new VerificarAtualizacoes(this);
+//    formVerificaAtualizacoes->show();
+//    formVerificaAtualizacoes->exec();
 }
 
 void TelaPrincipal::visitarForum() {
@@ -559,5 +562,5 @@ void TelaPrincipal::openMenuTableWidgetJpeg() {
 }
 
 void TelaPrincipal::removerMiniatura() {
-    widget.labelThumbnail->setPixmap(NULL);
+ //   widget.labelThumbnail->setPixmap(NULL);
 }

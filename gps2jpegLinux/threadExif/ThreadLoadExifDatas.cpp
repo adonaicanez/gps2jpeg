@@ -25,8 +25,8 @@
 #include "Forms/FormPrincipal/TelaPrincipal.h"
 #include "DadosArquivoGps.h"
 
-#include <QtGui/QTableWidget>
-#include <QtGui/QProgressBar>
+#include <QtWidgets/QTableWidget>
+#include <QtWidgets/QProgressBar>
 
 #include <cassert>
 #include <math.h>
@@ -51,7 +51,6 @@ void ThreadLoadExifDatas::run() {
     progressBar->setRange(0, listaArquivos.size());
     for (int i = 0; i < listaArquivos.size(); i++) {
         emit progressBarValue(i);
-        //    usleep(50000);
         QDateTime itemDataHora;
         QString itemLatitude, itemLongitude, itemAltitude, itemMsg;
         LoadExifDatasImage(listaArquivos.at(i), itemDataHora, itemLatitude, itemLongitude, itemAltitude, itemMsg, status);
@@ -159,10 +158,10 @@ void ThreadLoadExifDatas::LoadExifDatasImage(QString pathArquivoJpeg, QDateTime&
     Exiv2::Image::AutoPtr image;
 
     try {
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
         image = Exiv2::ImageFactory::open(pathArquivoJpeg.toStdString().c_str());
 #endif
-#ifdef Q_WS_X11
+#ifdef Q_OS_LINUX
         QString nomeUtf(pathArquivoJpeg.toUtf8());
         image = Exiv2::ImageFactory::open(nomeUtf.toStdString().c_str());
 #endif
@@ -185,7 +184,7 @@ void ThreadLoadExifDatas::LoadExifDatasImage(QString pathArquivoJpeg, QDateTime&
                     dia = atoi(i->value().toString().substr(8, 2).c_str());
 
                     QDate *data = new QDate();
-                    data->setYMD(ano, mes, dia);
+                    data->setDate(ano, mes, dia);
 
                     hora = atoi(i->value().toString().substr(11, 2).c_str());
                     minuto = atoi(i->value().toString().substr(14, 2).c_str());

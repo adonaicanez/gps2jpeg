@@ -60,7 +60,7 @@ void PeriodoAno::insereGpsPosition(GpsPosition *gpsPosition) {
     }
 }
 
-GpsPosition *PeriodoAno::procuraGpsPosition(QDateTime dataHora, uint segundosTolerancia, uint &menorTolerancia, int &status) {
+GpsPosition *PeriodoAno::procuraGpsPosition(QDateTime dataHora, int segundosTolerancia, int &menorTolerancia, int &status) {
     int i, mes;
  //   int mes, dia, hora, minuto, segundo;
 

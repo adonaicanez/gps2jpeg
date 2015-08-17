@@ -23,7 +23,7 @@
 #ifndef TRATAEVENTOTABLEWIDGETJPEG_H
 #define	TRATAEVENTOTABLEWIDGETJPEG_H
 
-#include <QtGui/QTableWidget>
+#include <QtWidgets/QTableWidget>
 
 class QEventLoop;
 

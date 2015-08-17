@@ -35,7 +35,7 @@ public:
     PeriodoAno(int ano);
     ~PeriodoAno();
     void insereGpsPosition(GpsPosition *gpsPosition);
-    GpsPosition *procuraGpsPosition(QDateTime dataHora, uint segundosTolerancia, uint &menorTolerancia, int &status);
+    GpsPosition *procuraGpsPosition(QDateTime dataHora, int segundosTolerancia, int &menorTolerancia, int &status);
     int getAno();
 private:
     int ano;

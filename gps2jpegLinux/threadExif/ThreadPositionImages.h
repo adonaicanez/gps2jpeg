@@ -27,7 +27,7 @@
 #include <QtCore/QThread>
 #include <QtCore/QDateTime>
 #include <QtCore/QString>
-#include <QtGui/QMainWindow>
+#include <QtWidgets/QMainWindow>
 
 #include "ThreadLoadExifDatas.h"
 
