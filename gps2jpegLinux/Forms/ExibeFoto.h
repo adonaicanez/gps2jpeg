@@ -24,8 +24,8 @@
 
 #include "ui_ExibeFoto.h"
 #include "ExibeFoto/GraphicsScene.h"
-#include <QtGui/QMainWindow>
-#include <QtGui/QDialog>
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QDialog>
 
 class ExibeFoto : public QMainWindow {
     Q_OBJECT
@@ -43,7 +43,7 @@ private:
     void readXmpData();
 
 private slots:
-    void formEditMetadatas();
+//    void formEditMetadatas();
     void fechar();
     void alteraIconeExpanded(QTreeWidgetItem *item);
     void alteraIconeCollapsed(QTreeWidgetItem *item);
